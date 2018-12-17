@@ -29,10 +29,18 @@
     <?php //comments_popup_script(); <?php wp_head(); ?>
 </head>
 <body>
-<div id="page">
-    <div id="header">
-        <!-- informations du blog -->
-        <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
-        <?php bloginfo('description'); ?>
-    </div>
+ <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <?php wp_list_pages('title_li='); ?>
+                </ul>
+            </div>
+        </div>
+    </nav>
 

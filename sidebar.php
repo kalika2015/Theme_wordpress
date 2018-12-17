@@ -6,22 +6,62 @@
  * Time: 15:27
  */
 ?>
-<div class="sidebar">
-    <ul>
-        <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
-            <div>
-                <input type="text" value="<?php the_search_query(); ?>" name="s" id="s" />
-                <input type="submit" id="searchsubmit" value="Chercher" />
+
+<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
+    <!-- Search Widget -->
+    <div class="card my-4">
+                <h5 class="card-header">Recherche</h5>
+                <div class="card-body">
+                    <div class="input-group">
+                        <input type="text" class="form-control" value="<?php the_search_query(); ?>" name="s" id="s" placeholder="Search for...">
+                        <span class="input-group-btn">
+                  <input type="submit" id="searchsubmit" class="btn btn-secondary" value="Rechercher" />
+                </span>
+                    </div>
+                </div>
             </div>
-        </form>
-        <li id="search"><?php include(TEMPLATEPATH . '/searchform.php'); ?></li>
-        <li id="calendar"><h2>Calendrier</h2>   <?php get_calendar(); ?></li>
-        <li><h2>Categories</h2>   <ul> <?php wp_list_cats('sort_column=name&optioncount=1&hierarchical=0'); ?> </ul></li>
-        <?php wp_list_pages('title_li=<h2>Pages</h2>'); ?>
-        <li><h2>Archives</h2><ul><?php wp_get_archives('type=monthly'); ?></ul></li>
-        <?php get_links_list(); ?>
-        <li><h2>Infos Meta</h2>   <ul> <?php wp_register(); ?> <li><?php wp_loginout(); ?></li> <li><a href="http://validator.w3.org/check/referer" title="This page validates as XHTML 1.0 Transitional"><abbr title="eXtensible HyperText Markup Language">XHTML valide</abbr></a></li> <li><a href="http://gmpg.org/xfn/"><abbr title="XHTML Friends Network">XFN</abbr></a></li> <li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress</a></li> <li><a href="http://wordpress-fr.net/" title="Communauté française de WordPress et WPmu.">WordPress Francophone</a></li> <?php wp_meta(); ?>   </ul> </li>
-        <li><h2>Abonnez-vous au blog !</h2>   <ul>   <li><a href="<?php bloginfo('rss2_url'); ?>" title="Flux RSS des articles">Flux RSS des articles</a></li> <li><a href="<?php bloginfo('comments_rss2_url'); ?>" title="Flux RSS des commentaires">Flux RSS des commentaires</a></li>   </ul> </li>
-    </ul>
-    <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>   CONTENU DE LA SIDEBAR   <?php endif; ?> </ul>
+</form>
+<?php include(TEMPLATEPATH . '/searchform.php'); ?>
+
+<!-- Calendrier Widget -->
+<div class="card my-4">
+    <h5 class="card-header">Calendrier</h5>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="list-unstyled mb-0">
+                    <li><?php get_calendar(); ?></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
+
+<!-- Categories Widget -->
+<div class="card my-4">
+    <h5 class="card-header">Categories</h5>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="list-unstyled mb-0">
+                    <li><?php wp_list_cats('sort_column=name&optioncount=1&hierarchical=0'); ?> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Side Widget -->
+<div class="card my-4">
+    <h5 class="card-header">Archives</h5>
+    <div class="card-body">
+        <ul class="list-unstyled mb-0">
+            <li><?php wp_get_archives('type=monthly'); ?></li>
+        </ul>
+    </div>
+</div>
+
+        <?php get_links_list(); ?>
+
+    <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?><?php endif; ?> </ul>
+
