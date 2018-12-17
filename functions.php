@@ -10,6 +10,7 @@
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
     wp_enqueue_style( 'hover-style-css', get_stylesheet_directory_uri() . '/vendor/bootstrap/css/bootstrap.min.css' );
+    wp_enqueue_style( 'fonts-style-css', 'https://use.fontawesome.com/releases/v5.6.1/css/all.css' );
 }
 
 function theme_js(){
@@ -19,4 +20,10 @@ function theme_js(){
 add_action( 'wp_enqueue_scripts', 'theme_js' );
 
 if ( function_exists('register_sidebar') ) register_sidebar(2);
+
+
+function vignet(){
+    add_theme_support('post-thumbnails');
+}
+add_action('after_setup_theme', 'vignet');
 ?>

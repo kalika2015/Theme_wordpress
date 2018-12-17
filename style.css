@@ -8,7 +8,7 @@ Creation Theme by kalidou-papa ||
 
 body {
     padding-top: 54px;
-    background-color: #EEE0C6 !important;
+    background-color: #fff !important;
 }
 .page_item{
     flex: 1 1 auto !important;
@@ -58,15 +58,93 @@ body {
     width: 40%;
 }
 .bg-black, .card-header {
-    background-color: #262424 !important;
+    background-color: #222 !important;
     color: #fff !important;
 }
+
 a {
     color: #E81C4F !important;
+}
+nav ul a, .navbar-brand{
+    color: #fff !important;
+}
+.navbar-brand{
+    font-family: "Lucida Calligraphy";
+    font-size: 24px !important;
+}
+nav ul a:hover, .navbar-brand:hover{
+    color: #E81C4F !important;
+    transition: all 1.218s;
 }
 
 @media (min-width: 992px) {
     body {
         padding-top: 56px;
     }
+}
+
+
+
+
+
+
+
+#profile_cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card1 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    max-width: 210px !important;
+    min-width: 210px !important;
+    margin: 8px;
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #808080;
+    border-radius: 8px;
+}
+
+.name {
+    text-align: center;
+    color: black;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 4px;
+}
+
+.img {
+    border-radius: 50%;
+    border: 1px solid #808080;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    margin-bottom: 8px;
+}
+
+.mail {
+    font-size: 12px;
+    color: #808080;
+}
+
+.button {
+    border: none ;
+    outline: 0 ;
+    display: inline-block !important;
+    color: white ;
+    background-color: #000 ;
+    text-align: center ;
+    cursor: pointer ;
+    width: 100% ;
+    font-size: 16px ;
+    font-weight: bold ;
+}
+
+.social {
+    text-decoration: none !important;
+    font-size: 22px !important;
+    color: black !important;
+}
+
+.button:hover,
+a:hover {
+    opacity: 0.7;
 }

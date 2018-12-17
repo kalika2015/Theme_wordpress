@@ -12,7 +12,7 @@
 
 <div class="row">
     <div class="col-md-12">
-        <img class="card-img-top" src="wp-content/uploads/2018/12/1500x500.jpg" alt="Card image cap">
+        <img class="card-img-top" src="wp-content/uploads/2018/12/keloumak.jpg" alt="Card image cap">
     </div>
 </div>
 
@@ -29,7 +29,7 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <h2 class="card-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
-                            <p class="card-text"><?php the_content(); ?></p>
+                            <p class="card-text"><?php the_excerpt(); ?></p>
                         </div>
                         <div class="card-footer text-muted">
                             <?php the_time('j F Y') ?> par <?php the_author() ?> | Cat&eacute;gorie: <?php the_category(', ') ?> | <?php comments_popup_link('Pas de commentaires', '1 Commentaire', '% Commentaires'); ?>

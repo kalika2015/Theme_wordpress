@@ -13,16 +13,16 @@
     <div class="row">
         <!-- Blog Entries Column -->
         <div class="col-md-8">
-            <h1 class="my-4">Page Heading
-                <small>Secondary Text</small>
-            </h1>
-            <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap"><br><br>
+
             <!-- Blog Post -->
             <?php if(have_posts()) : ?>
                 <?php while(have_posts()) : the_post(); ?>
+                    <h1 class="my-4">
+                        <small></small>
+                    </h1>
                     <div class="card mb-4">
                         <div class="card-body">
-                            <h2 class="card-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+                            <h1 class="card-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
                             <p class="card-text"><?php the_content(); ?></p>
                         </div>
                         <div class="card-footer text-muted">

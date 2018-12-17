@@ -51,12 +51,24 @@
     </div>
 </div>
 
-<!-- Side Widget -->
+<!-- Side Archives -->
 <div class="card my-4">
     <h5 class="card-header">Archives</h5>
     <div class="card-body">
         <ul class="list-unstyled mb-0">
             <li><?php wp_get_archives('type=monthly'); ?></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Side Infos Meta -->
+<div class="card my-4">
+    <h5 class="card-header">Infos Meta</h5>
+    <div class="card-body">
+        <ul class="list-unstyled mb-0">
+            <li><?php wp_register(); ?></li>
+            <li><?php wp_loginout(); ?></li>
+            <li><?php wp_meta(); ?></li>
         </ul>
     </div>
 </div>
