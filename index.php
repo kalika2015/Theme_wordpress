@@ -11,7 +11,7 @@
 <!-- Page Content -->
 
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 ">
         <img class="card-img-top" src="wp-content/uploads/2018/12/keloumak.jpg" alt="Card image cap">
     </div>
 </div>

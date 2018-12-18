@@ -11,7 +11,7 @@
     <div class="container">
         <p class="m-0 text-center text-white">
             Copyright &#169; <?php print(date('Y')); ?> <?php bloginfo('name'); ?> <br />
-            Blog con&ccedil;u par <a href="#">kalika</a> <br />
+            Template con&ccedil;u par <a href="https://github.com/kalika2015" target="_blank">kalika</a> <br />
             <a href="feed:<?php bloginfo('rss2_url'); ?>">Articles (RSS)</a> et
             <a href="feed:<?php bloginfo('comments_rss2_url'); ?>">Commentaires (RSS)</a>.
             <?php echo get_num_queries(); ?> requêtes. <?php timer_stop(1); ?> secondes.

@@ -15,27 +15,27 @@
     </div>
 </div>
 <div class="container">
-    <div class="row">
-        <!-- Blog Entries Column -->
+    <!-- Blog Entries Column -->
 
-            <h1 class="my-4">Membres de la promo-21
-                <small> </small>
-            </h1>
-            <!-- Blog Post -->
-            <?php if(have_posts()) : ?>
-                <?php while(have_posts()) : the_post(); ?>
-                 <div id="profile_cards"><?php the_content(); ?></div>
+    <div class="col-md-12 text-center">
+        <h1 class="my-4">La promo <a class="police">Keloumak</a> d'<a href="https://accesscodeschool.fr" target="_blank" class="police">Access Code School</a>
+            <small> </small>
+        </h1>
+    </div>
+    <!-- Blog Post -->
+    <?php if(have_posts()) : ?>
+        <?php while(have_posts()) : the_post(); ?>
+            <div id="profile_cards"></div>
+            <?php the_content(); ?>
 
-                <?php endwhile; ?>
-                <div class="navigation"> <?php edit_post_link('Modifier cette page', '<p>', '</p>'); ?> </div>
+        <?php endwhile; ?>
+        <div class="navigation"> <?php edit_post_link('Modifier cette page', '<p>', '</p>'); ?> </div>
 
-                <?php include (TEMPLATEPATH . "/searchform.php"); ?>
-            <?php endif; ?>
-            <div class= "post" id="post-<?php the_ID(); ?>"> <div class= "post_content"> </div> </div>
-        </div>
-        <!-- Sidebar Widgets Column -->
+        <?php include (TEMPLATEPATH . "/searchform.php"); ?>
+    <?php endif; ?>
+    <div class= "post" id="post-<?php the_ID(); ?>"> <div class= "post_content"> </div> </div>
 
-
+    <!-- Sidebar Widgets Column -->
     <!-- /.row -->
 </div>
 <!-- /.container -->

@@ -76,6 +76,9 @@ nav ul a:hover, .navbar-brand:hover{
     color: #E81C4F !important;
     transition: all 1.218s;
 }
+.police{
+    font-family: "Lucida Calligraphy";
+}
 
 @media (min-width: 992px) {
     body {
@@ -87,64 +90,205 @@ nav ul a:hover, .navbar-brand:hover{
 
 
 
+wrapper{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 80rem;
+}
 
-
-#profile_cards{
+.cols1{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-}
-.card1 {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
-    max-width: 210px !important;
-    min-width: 210px !important;
-    margin: 8px;
-    text-align: center;
-    padding: 8px;
-    border: 1px solid #808080;
-    border-radius: 8px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
-.name {
+.col1{
+    width: calc(25% - 2rem);
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.container1{
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+
+.front,
+.back{
+    background-size: cover;
+    background-position: center;
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     text-align: center;
-    color: black;
+    min-height: 280px;
+    height: auto;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.back{
+    background-color: #D3D3D3;
+}
+
+.front:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
     width: 100%;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 4px;
+    height: 100%;
+    content: '';
+    display: block;
+    opacity: .2;
+    background-color: #222;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+.container1:hover .front,
+.container1:hover .back{
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
-.img {
-    border-radius: 50%;
-    border: 1px solid #808080;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
-    margin-bottom: 8px;
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
+.inner{
+    -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+    transform: translateY(-50%) translateZ(60px) scale(0.94);
+    top: 50%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: 1px solid transparent;
+    -webkit-perspective: inherit;
+    perspective: inherit;
+    z-index: 2;
+}
+
+.container1 .back{
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.container1 .front{
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.container1:hover .back{
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.container1:hover .front{
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.front .inner p{
+    font-size: 22px;
+    top: 100px;
+    position: relative;
+    text-shadow: 1px 2px 3px #000;
+}
+
+front .inner p:after{
+    content: '';
+    width: 4rem;
+    height: 2px;
+    position: absolute;
+    background: #C6D4DF;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -.75rem;
+}
+
+.front .inner span{
+    color: rgba(255,255,255,0.7);
+    font-family: 'Montserrat';
+    font-weight: 300;
+}
 .mail {
-    font-size: 12px;
+    font-size: 16px;
     color: #808080;
 }
 
 .button {
-    border: none ;
-    outline: 0 ;
-    display: inline-block !important;
-    color: white ;
-    background-color: #000 ;
-    text-align: center ;
-    cursor: pointer ;
-    width: 100% ;
-    font-size: 16px ;
-    font-weight: bold ;
+    color: #222222;
+    border: 1px solid #fff;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow:1px 1px 3px #fff;
 }
 
-.social {
-    text-decoration: none !important;
-    font-size: 22px !important;
-    color: black !important;
+.back .inner p a i{
+    text-decoration: none;
+    font-size: 20px;
+    color: #E81C4F !important;
+}
+.back .inner p a {
+    color: #000 !important;
 }
 
 .button:hover,
 a:hover {
     opacity: 0.7;
+}
+
+@media screen and (max-width: 64rem){
+    .col1{
+        width: calc(33.333333% - 2rem);
+    }
+}
+
+@media screen and (max-width: 48rem){
+    .col1{
+        width: calc(50% - 2rem);
+    }
+}
+
+@media screen and (max-width: 32rem){
+    .col1{
+        width: 100%;
+        margin: 0 0 2rem 0;
+    }
 }
